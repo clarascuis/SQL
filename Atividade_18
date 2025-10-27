@@ -1,0 +1,14 @@
+USE armazem;
+
+SELECT * FROM produtos
+WHERE desconto IS NULL
+
+UPDATE produtos
+SET desconto = 0
+WHERE desconto IS NULL;
+
+SELECT produtosID, quantidade FROM produtos
+WHERE desconto > 10 AND desconto < 20;
+
+SELECT quantidade, valor_unit FROM produtos
+WHERE cod_prod = 2;
